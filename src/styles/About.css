@@ -1,0 +1,179 @@
+.about-container {
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.about-boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 700px;
+  height: 90vh;
+  min-height: 500px;
+  max-height: 650px;
+}
+
+.about-box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+}
+
+.about-box:first-child {
+  flex: 0.8; /* About Me box takes 40% of space */
+}
+
+.about-box:last-child {
+  flex: 1.2; /* Skills box takes 60% of space */
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-box p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-box ul {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.about-box li {
+  margin-bottom: 0.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.progress {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #007bff, #a600ff);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 896px) {
+  .about-container {
+    padding: 0rem 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem 0;
+    align-items: center;
+  }
+
+  .about-boxes-container {
+    width: 100%;
+    max-width: 600px;
+    height: 85vh;
+    min-height: 600px;
+    max-height: 800px;
+  }
+
+  .about-box {
+    padding: 1.5rem;
+    min-height: 350px;
+  }
+
+  .about-box h3 {
+    font-size: 1.3rem;
+  }
+
+  /* iOS Safari specific fixes */
+  .about-box * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

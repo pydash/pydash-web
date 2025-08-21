@@ -1,0 +1,10 @@
+.contact-container {
+  height: 400px;
+  position: relative;
+}
+
+@media (max-width: 896px) {
+  .contact-container {
+    height: 200px;
+  }
+}

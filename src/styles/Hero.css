@@ -1,0 +1,142 @@
+.hero-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.name-badge button {
+  padding: 0.5rem 2rem;
+  margin: 3rem 0 1rem 0;
+  background-color: rgba(255, 255, 255, 0.036);
+  border: 1px solid #353535;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.name-badge svg {
+  margin-right: 0.5rem;
+}
+
+.hero-text-container {
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  word-spacing: -0.2rem;
+  padding: 0 1rem;
+}
+
+.hero-cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cta-container button {
+  margin: 0 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.view-project {
+  background-color: #fff;
+  border: none;
+}
+
+button.view-project a {
+  color: black;
+}
+
+button.contact-me {
+  background-color: #111;
+  border: 1px solid #353535;
+}
+
+.hero-cta-container button a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-cta {
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.view-project:hover {
+  background-color: #d5d5d5;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+button.contact-me:hover {
+  background-color: #000;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+@media (max-width: 896px) {
+  .hero-text {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    word-spacing: 0;
+  }
+
+  .hero-cta-container {
+    flex-direction: column;
+  }
+
+  .hero-cta-container button {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .hero-cta {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .name-badge button {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-sub-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .view-project:active {
+    background-color: #d5d5d5;
+    color: white;
+  }
+
+  .contact-me:active {
+    background-color: #000;
+    color: white;
+  }
+}

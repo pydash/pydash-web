@@ -1,0 +1,26 @@
+.darkveil-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.darkveil-canvas {
+  position: absolute;
+  inset: 0; /* fills parent */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.darkveil-content {
+  position: relative; /* keeps it above canvas */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* centers vertically too */
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}

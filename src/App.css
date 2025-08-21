@@ -1,0 +1,19 @@
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #000;
+}

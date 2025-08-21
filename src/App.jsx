@@ -1,11 +1,25 @@
-function App(){
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import LogoMarquee from "./components/LogoMarquee";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-  return(
+function App() {
+  return (
     <>
-      <h1>Hello World</h1>
+      <Navbar />
+      <Hero />
+      <LogoMarquee />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 }
 
-
-export default App
+export default App;
